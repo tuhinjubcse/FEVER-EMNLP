@@ -6,7 +6,7 @@ from drqascripts.retriever.build_tfidf_lines import OnlineTfidfDocRanker
 from nltk.corpus import stopwords
 import unicodedata
 stop_words = set(stopwords.words('english'))
-fil = open('/Users/tuhinchakrabarty/Desktop/FEVER/fever-baselines/document_shared_dev.txt','w')
+fil = open('./document_shared_dev.txt','w')
 
 
 
