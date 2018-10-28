@@ -5,11 +5,11 @@ import ast
 import json
 import unicodedata
 
-f = open('root_entity_test.txt','w')
+f = open('root_entity_dev.txt','w')
 
 
 count = 1
-for line in open('blind_task_test.jsonl','r'):
+for line in open('shared_task_dev.jsonl','r'):
 	line = json.loads(line.strip())
 	claim = nltk.word_tokenize(line['claim'])
 	pos = nltk.pos_tag(claim)
