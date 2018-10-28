@@ -1,6 +1,6 @@
-gold_label = open('./dataset/SNLI1/labels.test','r')
-pred = open('./result_new1_bi10000000.0.txt','r')
-lengths = open('./dataset/SNLI1/length.test')
+gold_label = open('./dataset/ols/SNLI/labels.test','r')
+pred = open('./result_test_10000000.0.txt','r')
+lengths = open('./dataset/ols/SNLI/length.test')
 l = []
 for line in lengths:
 	l.append(int(line.strip()))
