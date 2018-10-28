@@ -6,7 +6,7 @@ import time
 l =[]
 s = ''
 a = []
-for line in open('NER_blind_test','r'):   #change files names based on dev /test
+for line in open('NER_shared_dev','r'):   #change files names based on dev /test
 	if len(line.strip())==0:
 		l.append(a)
 		a = []
@@ -76,7 +76,7 @@ for line in open('shared_task_test.jsonl','r'):
 
 count = 1
 for a in l:
-	f= open('NER_blind_test.txt','a') #change files names based on dev /test
+	f= open('NER_shared_dev.txt','a') #change files names based on dev /test
 	rec = []
 	a = list(set(a))
 	for ner in a:
