@@ -26,8 +26,8 @@ def google_search(search_term, api_key, cse_id, **kwargs):
 
 
 c = 0
-a = ['shared_task_test.jsonl']  #change name of file for dev set 
-f1 = open('blind_google.txt','a') #again file name can be changed
+a = ['blind_task_test.jsonl']  #change name of file for dev set 
+f1 = open('blind_test_google.txt','a') #again file name can be changed
 for file in a:
 	f = open(file,'r')
 	count = 1
