@@ -224,8 +224,7 @@ def trainepoch(epoch):
 
 
 def evaluate(epoch, eval_type='valid', final_eval=False):
-	fi = open('politifact'+eval_type+str(epoch)+'.txt','w')
-	f2 = open('scores_poli'+eval_type+str(epoch)+'.txt','w')
+	fi = open('result_'+eval_type+str(epoch)+'.txt','w')
 	nli_net.eval()
 	correct = 0.
 	global val_acc_best, lr, stop_training, adam_stop
@@ -251,8 +250,6 @@ def evaluate(epoch, eval_type='valid', final_eval=False):
 		pred = output.data.max(1)[1]
 		for p in pred:
 			fi.write(str(p)+'\n')
-		for sc in output.data.cpu().numpy():
-			f2.write(str([sc[0],sc[1]])+'\n')
 		correct += pred.long().eq(tgt_batch.data.long()).cpu().sum()
 	
 	eval_acc = round(100 * correct / len(s1), 2)
@@ -291,9 +288,6 @@ epoch = 1
 while not stop_training and epoch <= params.n_epochs:
 	train_acc = trainepoch(epoch)
 	eval_acc = evaluate(epoch, eval_type='valid')
-	#evaluate(epoch,eval_type = 'test')
-	#os.system('python measure.py ./dataset/ols/SNLI/labels.dev '+'pred'+'valid'+str(epoch)+'.txt'+' ./dataset/ols/SNLI/length.dev predict_dev.jsonl')
-	#os.system('python measure.py ./dataset/ols/SNLI/labels.test '+'pred'+'test'+str(epoch)+'.txt'+' ./dataset/ols/SNLI/length.test predict_test.jsonl')
 	epoch += 1
 
 # Run best model on test set.
