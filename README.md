@@ -1,5 +1,8 @@
 # FEVER-EMNLP
-This repository contains the code for COLUMBIA NLP's submission to FEVER (Fact Extraction and Verification Workshop) ,EMNLP 2018
+This repository contains the code for COLUMBIA NLP's submission to FEVER (Fact Extraction and Verification Workshop) ,EMNLP 2018 from our paper (https://aclanthology.info/papers/W18-5521/w18-5521)
+ Robust Document Retrieval and Individual Evidence Modeling for Fact Extraction and Verification.
+ 
+ If you find the code useful or use it please dont forget to cite .
 
 Doc Retrival
 
