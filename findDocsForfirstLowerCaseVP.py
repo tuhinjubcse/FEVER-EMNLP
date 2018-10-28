@@ -7,7 +7,7 @@ import unicodedata
 
 
 count = 1
-for line in open('shared_task_dev.jsonl','r'):
+for line in open('shared_task_dev.jsonl','r'): #change file name accordingly
 	line = json.loads(line.strip())
 	claim = nltk.word_tokenize(line['claim'])
 	pos = nltk.pos_tag(claim)
