@@ -21,6 +21,12 @@ s1.train , s2.train , labels.train for train file
 These files are to be used for Textual Entailment
 
 Create folder dataset/ols/SNLI and put all these files there
-beacuse fastText and pytorch had a version problem . run train_nli once it creates the word_dict.txt file and then stop it 
+beacuse fastText and pytorch had a version problem . run train_nli once it creates the word_dict.txt file and then stop it .
+getFastText.py creates embedding.txt in same directory from word_dict.txt , once it is done
+run train_nli and you are good
+
+
+After finishing the running it produces predictions for test and train .
+Use majority.py to get single entailment prediction from multiple evidences using our algorithm 
 
 
