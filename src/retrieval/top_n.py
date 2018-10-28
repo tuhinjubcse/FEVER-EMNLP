@@ -6,7 +6,7 @@ from drqascripts.retriever.build_tfidf_lines import OnlineTfidfDocRanker
 from nltk.corpus import stopwords
 import unicodedata
 stop_words = set(stopwords.words('english'))
-fil = open('/Users/tuhinchakrabarty/Desktop/FEVER/fever-baselines/document_shared_dev.txt','w')
+fil = open('./document_shared_dev.txt','w')
 
 
 
@@ -49,31 +49,8 @@ class TopNDocsTopNSents(RetrievalMethod):
 
 
     def get_sentences_for_claim(self,line,include_text=False):
-        # pages = self.get_docs_for_claim(claim_text)
-        # sorted_p = list(sorted(pages, reverse=True, key=lambda elem: elem[1]))
-        # sorted_p = list(line['predicted_pages'])
-        # claim_words = line['claim'].strip().split()
-        # claim_words[-1] = claim_words[-1][:-1]
-        # sorted_p_new = []
-        # for j in range(len(sorted_p)):
-        #     x = [w for w in sorted_p[j].split('_') if not w in stop_words]
-        #     for k in range(len(x)):
-        #         x[k] = x[k].replace('-LRB-','')
-        #         x[k] = x[k].replace('-RRB-','')
-        #         x[k] = x[k].replace('-COLON-','')
-        #     count = 0
-        #     for word in claim_words:
-        #         word = word.replace('(','')
-        #         word = word.replace(')','')
-        #         word = word.replace(':','')
-        #         if word in x:
-        #             count = count+1
-        #     sorted_p_new.append((sorted_p[j],count,j))
-
-        # sorted_p_new = list(sorted(sorted_p_new,  key=lambda elem: (-elem[1],elem[2])))
 
         pages = list(line['predicted_pages'])
-        #[p[0] for p in sorted_p_new[:self.n_docs]]
         print(pages)
         p_lines = []
         for page in pages:
