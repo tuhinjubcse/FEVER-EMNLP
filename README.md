@@ -3,6 +3,19 @@ This repository contains the code for COLUMBIA NLP's submission to FEVER (Fact E
  Robust Document Retrieval and Individual Evidence Modeling for Fact Extraction and Verification.
  
  If you find the code useful or use it please dont forget to cite .
+ 
+ @InProceedings{W18-5521,
+  author = 	"Chakrabarty, Tuhin
+		and Alhindi, Tariq
+		and Muresan, Smaranda",
+  title = 	"Robust Document Retrieval and Individual Evidence Modeling for Fact Extraction and Verification.",
+  booktitle = 	"Proceedings of the First Workshop on Fact Extraction and VERification (FEVER)",
+  year = 	"2018",
+  publisher = 	"Association for Computational Linguistics",
+  pages = 	"127--131",
+  location = 	"Brussels, Belgium",
+  url = 	"http://aclweb.org/anthology/W18-5521"
+}
 
 *Doc Retrival*
 
